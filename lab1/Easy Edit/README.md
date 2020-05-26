@@ -17,7 +17,7 @@ Easy Edit version 1.0 is the initial version.Supports: <br />
 * h: Display program help center.
 * s: Save image to local machine.
 * q: Quit program.
-<br />
+<a />
 **Image Editing / processing:**
 * Read: Read input image name from loacal machine. Reading Path: `/img`
 * Show: Display read image. 
