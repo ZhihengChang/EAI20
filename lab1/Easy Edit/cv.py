@@ -37,7 +37,7 @@ while True:
     #Save Image
     elif cmd.strip().lower() == 's':
         if read:
-            outImgName = util.deafut_output_name
+            outImgName = util.default_output_name
             if len(input_array) > 1:
                 if input_array[1] is not None:
                     outImgName = input_array[1]
