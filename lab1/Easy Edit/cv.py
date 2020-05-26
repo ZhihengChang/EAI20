@@ -84,9 +84,14 @@ while True:
         if not read:
             print(util.show_failed)
         else:
-            try: 
-                user_input = input(util.enter_degree)
-                img = util.rotate_image(img, int(user_input.strip()))
+            try:
+                degree = None
+                if len(input_array) > 1:
+                    degree = input_array[1]
+                else:
+                    degree = input(util.enter_degree)
+
+                img = imutils.rotate_bound(img, float(degree))
                 edited = True
                 saved = False
             except:
