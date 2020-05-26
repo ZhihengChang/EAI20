@@ -21,30 +21,48 @@ while True:
         user_input = input(util.menu)
         initial = False
     else:
-        user_input = input()
+        user_input = input(">> ")
+
+    input_array = user_input.split()
+    if len(input_array) == 0:
+        cmd = ''
+    else:
+        cmd = input_array[0]
 
     #Get Help
-    if user_input.strip().lower() == 'h':
+    if cmd.strip().lower() == 'h':
         util.printHelp()
 
     #Save Image
-    elif user_input.strip().lower() == 's':
+    elif cmd.strip().lower() == 's':
         if read:
-            user_input = input(util.enter_outfilename)
-            cv2.imwrite(user_input, img)
+            outImgName = util.deafut_output_name
+            if len(input_array) > 1:
+                if input_array[1] is not None:
+                    outImgName = input_array[1]
+            try:
+                cv2.imwrite(outImgName, img)
+            except:
+                print(util.save_failed)
+                print(util.save_failed_note)
         saved = True
 
     #Quit Program
-    elif user_input.strip().lower() == 'q':
+    elif cmd.strip().lower() == 'q':
         user_input = input(util.quit_confirm)
         if user_input == 'y':
             break
 
     #Read an Image
-    elif user_input.strip().lower() == 'read':
+    elif cmd.strip().lower() == 'read':
+        readImgName = ''
+        if len(input_array) > 1:
+            readImgName = input_array[1]
+        else:
+            readImgName = input(util.enter_imgname)
+
         try:
-            user_input = input(util.enter_imgname)
-            img = cv2.imread(img_path + user_input, 1)
+            img = cv2.imread(img_path + readImgName, 1)
             read = True
             print(img.shape)
             print(util.read_succeed)
@@ -54,7 +72,7 @@ while True:
             print(util.read_failed_note)
 
     #Show Readed Image
-    elif user_input.strip().lower() == 'show':
+    elif cmd.strip().lower() == 'show':
         if not read:
             print(util.show_failed)
         else:
@@ -62,13 +80,18 @@ while True:
             cv2.waitKey()
     
     #Rotate Readed Image
-    elif user_input.strip().lower() == 'rotate':
+    elif cmd.strip().lower() == 'rotate':
         if not read:
             print(util.show_failed)
         else:
-            try: 
-                user_input = input(util.enter_degree)
-                img = util.rotate_image(img, int(user_input.strip()))
+            try:
+                degree = None
+                if len(input_array) > 1:
+                    degree = input_array[1]
+                else:
+                    degree = input(util.enter_degree)
+
+                img = imutils.rotate_bound(img, float(degree))
                 edited = True
                 saved = False
             except:
@@ -76,7 +99,7 @@ while True:
                 print(util.rotate_failed_note)
 
     #Write Text on Readed Image    
-    elif user_input.strip().lower() == 'write':
+    elif cmd.strip().lower() == 'write':
         if not read:
             print(util.show_failed)
         else:
@@ -91,9 +114,9 @@ while True:
             except:
                 print(util.write_failed)
                 print(util.write_failed_note)
-    
+
     #Print Current Program Status
-    elif user_input.strip().lower() == 'status':
+    elif cmd.strip().lower() == 'status':
         util.printStatus(read, edited, saved)
 
     #When user hits enter, print system & datetime
