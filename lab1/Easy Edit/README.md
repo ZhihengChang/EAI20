@@ -5,7 +5,7 @@ Install requirements using `pip`:
 ```bash
 pip install -r /path/to/requirements.txt
 ```
-**NOTE:** requirements.txt should just be in the Easy Edit folder.
+**NOTE:** requirements.txt should just be in the Easy Edit folder. <br />
 After install the requirements, run the program using:
 ```bash
 python cv.py
@@ -16,8 +16,9 @@ Easy Edit version 1.0 is the initial version.Supports: <br />
 **Basics:**
 * h: Display program help center.
 * s: Save image to local machine.
-* q: Quit program.<br />
-**Image Editing / processing: **
+* q: Quit program.
+<br />
+**Image Editing / processing:**
 * Read: Read input image name from loacal machine. Reading Path: `/img`
 * Show: Display read image. 
 * Write: Write input text on the read image at input position. Text colors: red, green, blue
