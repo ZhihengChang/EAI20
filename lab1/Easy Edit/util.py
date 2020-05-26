@@ -25,12 +25,13 @@ rotate_failed_note = '*NOTE: Please Double Check the Rotate Degree entered, and 
 read_failed_note = '*NOTE: Please Double Check Image Name and Type entered, and Re-enter \'read/ read filename\' Command.'
 write_failed_note = '*NOTE: Please Double Check the Position entered, and Re-enter \'write\' Command. The Value Should be 2 Integer [int, int].'
 not_recognized = '\' Is Not Recognized. Type \'h\' for Help \n'
-help_read = 'Enter \'read\' to read an image'
+help_save = 'Enter \'s/ s filename\'to save image'
+help_read = 'Enter \'read/ read filename\' to read an image'
 help_show = 'Enter \'show\' to show the read image'
 help_write = 'Enter \'write\' to write text on the read image'
-help_rotate = 'Enter \'rotate\' to rotate the read image'
+help_rotate = 'Enter \'rotate/ rotate degree\' to rotate the read image'
 help_status = 'Enter \'status\' to show the current program state'
-help = [help_read, help_show, help_write, help_rotate, help_status]
+help = [help_save, help_read, help_show, help_write, help_rotate, help_status]
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 fontScale = 1
