@@ -27,7 +27,7 @@ Easy Edit version 1.1 update the input format as well as few command to be more 
 
 ---
 **Version 1.0**  2020/5/26<br />
-Easy Edit version 1.0 is the initial version.Supports: <br />
+Easy Edit version 1.0 is the initial version. Supports: <br />
 **Basics:**
 * h: Display program help center.
 * s: Save image to local machine.
