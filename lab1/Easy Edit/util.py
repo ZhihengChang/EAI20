@@ -33,7 +33,7 @@ help_write = "Enter 'write' to write text on the read image"
 help_rotate = "Enter 'rotate / rotate degree' to rotate the read image"
 help_convert = "Enter 'convert / convert order_of_color' to change the order of color of the read image"
 help_status = "Enter 'status' to show the current program state"
-help = [help_save, help_read, help_show, help_write, help_rotate, help_status]
+help = [help_save, help_read, help_show, help_write, help_rotate, help_convert, help_status]
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 fontScale = 1
