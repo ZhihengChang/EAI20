@@ -21,7 +21,7 @@ while True:
         user_input = input(util.menu)
         initial = False
     else:
-        user_input = input()
+        user_input = input(">> ")
 
     #Get Help
     if user_input.strip().lower() == 'h':
