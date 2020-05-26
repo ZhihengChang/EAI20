@@ -126,7 +126,6 @@ while True:
             convert_code = cv2.COLOR_BGR2RGB
             if len(input_array) > 1:
                 convert_type = input_array[1].strip().lower()
-                print(convert_type)
                 if convert_type not in ['rgb', 'bgr']:
                     print(util.convert_failed)
                     print(util.convert_failed_note)
