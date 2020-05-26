@@ -11,7 +11,16 @@ After install the requirements, run the program using:
 python cv.py
 ```
 ## Version History
-**Version 1.0** <br />
+**Version 1.1**  2020/5/26<br />
+Easy Edit version 1.1 update the input format as well as few command to be more user friendly:
+* **FIX** User input are now follow after `>>`
+* **FIX** The image window after rotate image are now adjust to the image size
+* **NEW** `s` command are now support `s filename`
+* **NEW** `read` command are now support `read filename`
+* **NEW** `rotate` command are now support `rotate degree`
+
+---
+**Version 1.0**  2020/5/26<br />
 Easy Edit version 1.0 is the initial version.Supports: <br />
 **Basics:**
 * h: Display program help center.
