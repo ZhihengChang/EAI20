@@ -11,13 +11,19 @@ After install the requirements, run the program using:
 python cv.py
 ```
 ## Version History
+**Version 1.2**  2020/5/26<br />
+Easy Edit version 1.2 add a new command for image editing / processing: convert
+* **NEW** convert / convert order_of_color: Convert the order of color of the read image between RGB and BGR.
+
+
+---
 **Version 1.1**  2020/5/26<br />
 Easy Edit version 1.1 update the input format as well as few command to be more user friendly:
-* **FIX** User input are now follow after `>>`
-* **FIX** The image window after rotate image are now adjust to the image size
-* **NEW** `s` command are now support `s filename`
-* **NEW** `read` command are now support `read filename`
-* **NEW** `rotate` command are now support `rotate degree`
+* **FIX** User input are now follow after `>>`.
+* **FIX** The image window after rotate image are now adjust to the image size.
+* **NEW** `s` command are now support `s filename`.
+* **NEW** `read` command are now support `read filename`.
+* **NEW** `rotate` command are now support `rotate degree`.
 
 ---
 **Version 1.0**  2020/5/26<br />
@@ -29,8 +35,8 @@ Easy Edit version 1.0 is the initial version.Supports: <br />
 
 
 **Image Editing / processing:**
-* Read: Read input image name from loacal machine. Reading Path: `/img`
+* Read: Read input image name from loacal machine. Reading Path: `/img`.
 * Show: Display read image. 
-* Write: Write input text on the read image at input position. Text colors: red, green, blue
+* Write: Write input text on the read image at input position. Text colors: red, green, blue.
 * Rotate: Rotate read image by input degrees.
 * Status: Display program status. 
