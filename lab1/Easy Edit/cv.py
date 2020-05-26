@@ -12,6 +12,7 @@ read = False
 edited = False
 saved = False
 img = None
+color = None
 print(util.note)
 
 while True:
@@ -64,6 +65,7 @@ while True:
         try:
             img = cv2.imread(img_path + readImgName, 1)
             read = True
+            color = 'BGR'
             print(img.shape)
             print(util.read_succeed)
             
@@ -114,6 +116,24 @@ while True:
             except:
                 print(util.write_failed)
                 print(util.write_failed_note)
+
+    #Convert image betwenn RGB and BGR
+    elif cmd.strip().lower() == 'convert':
+        if not read:
+            print(util.show_failed)
+        else:
+            convert_type = 'rgb'
+            convert_code = cv2.COLOR_BGR2RGB
+            if len(input_array) > 1:
+                convert_type = input_array[1].strip().lower()
+                print(convert_type)
+                if convert_type not in ['rgb', 'bgr']:
+                    print(util.convert_failed)
+                    print(util.convert_failed_note)
+                else:
+                    if convert_type == 'bgr':
+                        convert_code = cv2.COLOR_RGB2BGR
+                    img = cv2.cvtColor(img, convert_code)
 
     #Print Current Program Status
     elif cmd.strip().lower() == 'status':
